@@ -1,0 +1,74 @@
+{% extends "message.html" %}
+{% block body %}
+<html>
+    <head>
+        <title>Diabetes Prediction </title>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <h1 class="text-center"> Diabetes Onset Prediction Application</h1>
+        <div class="info" role="alert">
+            <p>
+                This model uses SVM algorithm to predict onset of diabetes in females based on the data from Pima Indians Diabetes Dataset with
+            a <b>77%</b> accuracy.
+            </p>
+        </div>
+
+        <div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <form method="POST" >
+              <div class="form-group">
+                <label for="pregnancies">Number of pregnancies</label>
+                <input type="text" required name="pregnancies" class="form-control" id="pregnancies"  placeholder="Enter pregnancies">
+              </div>
+              <div class="form-group">
+                <label for="glucose">Glucose level</label>
+                <input type="text" required name="glucose" class="form-control" id="glucose" placeholder="Enter glucose level">
+              </div>
+               <div class="form-group">
+                    <label for="bloodpressure">Blood Pressure</label>
+                    <input type="text" required name="bloodpressure" class="form-control" id="bloodpressure" placeholder="Enter blood pressure level">
+               </div>
+                <div class="form-group">
+                    <label for="skinthickness">Skin Thickness</label>
+                    <input type="text" required name="skinthickness" class="form-control" id="skinthickness" placeholder="Enter skin thickness">
+               </div>
+               <div class="form-group">
+                    <label for="insulin">Insulin</label>
+                    <input type="text" required name="insulin" class="form-control" id="insulin" placeholder="Enter Insulin">
+               </div>
+                <div class="form-group">
+                    <label for="bmi">BMI</label>
+                    <input type="text" required name="bmi" class="form-control" id="bmi" placeholder="Enter BMI">
+               </div>
+               <div class="form-group">
+                    <label for="dpf">Diabetes Pedigree Function</label>
+                    <input type="text" required name="dpf" class="form-control" id="dpf" placeholder="Enter Diabetes Pedigree Function value">
+               </div>
+               <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" required name="age" class="form-control" id="age" placeholder="Enter Age">
+               </div>
+<!--              <div class="form-check">-->
+<!--                <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--                <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--              </div>-->
+              <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+            </div>
+    </div>
+        </div>
+
+    <script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </script>
+    </body>
+</html>
+{% endblock %}

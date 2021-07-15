@@ -1,0 +1,14 @@
+.flashMsgDiabetic{
+    color: red;
+    text-align: center
+}
+
+.flashMsgNotDiabetic{
+    color: green;
+    text-align: center
+}
+
+.info{
+    text-align: center;
+    color: #0362fc
+}

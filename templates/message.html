@@ -1,0 +1,25 @@
+
+<!doctype html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+
+    {% for category, message in messages %}
+<!--      <div class="{{ category }} alert alert-danger">-->
+<!--        {{ message }}-->
+<!--      </div>-->
+        {% if category=="flashMsgDiabetic" %}
+            <div  class="{{ category }} alert alert-danger" role="alert ">
+              <h4 class="alert-heading">{{ message }}</h4>
+            </div>
+        {% else %}
+            <div  class="{{ category }} alert alert-success" role="alert ">
+              <h4 class="alert-heading">{{ message }}</h4>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
